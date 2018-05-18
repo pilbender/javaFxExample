@@ -48,6 +48,9 @@ public class Main extends Application {
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
 
+        // For debugging so we can see the grid lines
+        grid.setGridLinesVisible(true);
+
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
         primaryStage.show();
