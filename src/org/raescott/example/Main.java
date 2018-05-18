@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -49,7 +50,13 @@ public class Main extends Application {
         grid.add(pwBox, 1, 2);
 
         // For debugging so we can see the grid lines
-        grid.setGridLinesVisible(true);
+        //grid.setGridLinesVisible(true);
+
+        Button btn = new Button("Sign in");
+        HBox hbBtn = new HBox(10);
+        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtn.getChildren().add(btn);
+        grid.add(hbBtn, 1, 4);
 
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
